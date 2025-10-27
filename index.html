@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main">
+    <!-- Top bar with history toggle -->
+    <div id="topBar">
+      <button id="toggleHistory" title="Toggle History">↺</button>
+    </div>
+
+    <!-- Expression and result -->
+    <div id="historyDisplay"></div>
+    <div id="display">0</div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="number" onclick="append('7')">7</button>
+      <button class="number" onclick="append('8')">8</button>
+      <button class="number" onclick="append('9')">9</button>
+      <button class="operator" onclick="append('/')">÷</button>
+
+      <button class="number" onclick="append('4')">4</button>
+      <button class="number" onclick="append('5')">5</button>
+      <button class="number" onclick="append('6')">6</button>
+      <button class="operator" onclick="append('*')">×</button>
+
+      <button class="number" onclick="append('1')">1</button>
+      <button class="number" onclick="append('2')">2</button>
+      <button class="number" onclick="append('3')">3</button>
+      <button class="operator" onclick="append('-')">−</button>
+
+      <button class="clear" onclick="clearDisplay()">C</button>
+      <button class="number" onclick="append('0')">0</button>
+      <button class="number" onclick="append('.')">.</button>
+      <button class="operator" onclick="append('+')">+</button>
+
+      <button class="backspace" onclick="backspace()">⌫</button>
+      <button class="operator" style="grid-column: span 3;" onclick="finalize()">=</button>
+    </div>
+
+    <!-- History panel -->
+    <div id="historyPanel">
+      <!-- history items will appear here -->
+      <button id="clearHistory" title="Clear History">🗑</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
